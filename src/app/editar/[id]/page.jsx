@@ -37,10 +37,10 @@ export default function EditarUsuario({ datos }) {
         e.preventDefault();
         try {
             console.log("Enviando datos:", usuario);
-            const response = await editarUsuario(datos._id, usuario);
+            const response = await editarUsuario(id, usuario);
             console.log("Respuesta de la API:", response);
             alert("Usuario editado con éxito");
-            router.push("/administradores"); // Redirige a la página de administradores
+            router.push("/admin"); // Redirige a la página de administradores
         } catch (error) {
             console.error("Error al editar usuario:", error);
             alert("Hubo un error al editar el usuario.");

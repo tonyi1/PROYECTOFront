@@ -42,7 +42,8 @@ export const obtenerTodosLosUsuarios = async () => {
 
 export const editarUsuario = async (id, datosActualizados) => {
     console.log(id);
-    return await axios.put(`${API}/usuario/${id}`, datosActualizados, { withCredentials: true });
+    const respuesta=await axios.put(`${API}/edicion/${id}`, datosActualizados, { withCredentials: true });
+    return respuesta.data;
 };
 
 export const borrarUsuario = async (id) => {
